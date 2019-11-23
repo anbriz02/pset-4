@@ -6,8 +6,10 @@ const MIN = Number.MIN_SAFE_INTEGER;
 let lowerbound = 1;
 let upperbound = -1;
 
+console.log()
+
 while (lowerbound > upperbound || Number.isNaN(lowerbound) || Number.isNaN(upperbound) || (lowerbound < MIN || lowerbound > MAX) || (upperbound < MIN || upperbound > MAX)) {
-  lowerbound = Number(readlineSync.question("\nLower bound: "));
+  lowerbound = Number(readlineSync.question("Lower bound: "));
   upperbound = Number(readlineSync.question("Upper bound: "));
 }
 
@@ -19,4 +21,4 @@ for (let i = lowerbound; i <= upperbound; i++) {
     }
 }
 
-console.log("\n" + sum + "." )
+console.log("\n" + sum.toLocaleString() + "." + "\n" )
