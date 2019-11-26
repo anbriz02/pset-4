@@ -15,25 +15,25 @@ while ((integer < MIN || integer > MAX) || Number.isNaN(integer) || !Number.isIn
 }
 
 let factor = "";
-let smallInteger = 0;
-let largeInteger = 0;
-let highestFactor = integer;
+let smallest = 0;
+let largest = 0;
+let hf = integer;
 
 
    for (i = 1; i <= integer; i++) {
        if (integer % i == 0 && integer / i === i) {
-        largeInteger = i;
-        factor = factor + largeInteger + ", ";
+        largest = i;
+        factor = factor + largest + ", ";
     }
-    else if (integer % i === 0 && i < highestFactor) {
-        smallInteger = i;
-        largeInteger = integer / i;
-        highestFactor = largeInteger;
-        factor = factor + smallInteger + ", " + largeInteger + ", ";
+    else if (integer % i === 0 && i < hf) {
+        smallest = i;
+        largest = integer / i;
+        hf = largest;
+        factor = factor + smallest + ", " + largest + ", ";
     }
-    else if (i >= highestFactor) {
-        var comma = " " + String(largeInteger) + ", ";
-        factor = factor.replace(comma, " " + String(largeInteger) + ".");
+    else if (i >= hf) {
+        var comma = " " + String(largest) + ", ";
+        factor = factor.replace(comma, " " + String(largest) + ".");
       }
   }
 

@@ -11,20 +11,19 @@ let sum = 0;
 let amount = 0;
 
 do {
-  input = Number(readlineSync.question("Non-negative integer: "));
-  while (integer < MIN || integer > MAX || Number.isNaN(integer) || !Number.isInteger(integer) ) {
-
+  integer = Number(readlineSync.question("Non-negative integer: "));
+  if (integer >= MIN && integer < MAX && Number.isInteger(integer)) {
+    sum = sum + integer;
+    amount = amount + 1;
   }
-
-} while (integer > 0){
-
-sum = sum + integer;
-amount = amount + 1;
-}
-
-let average = sum / amount;
-average = average.toLocaleString();
+} while (integer > 0);
 
 
 
-console.log("\n" + average + ".");
+let average = (sum / amount).toLocaleString("en", { minimumFractionDigits: 3, maximumFractionDigits: 3});
+
+
+
+
+
+console.log("\n" + average + "." + "\n");

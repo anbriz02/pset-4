@@ -18,20 +18,21 @@ do {
 
 console.log()
 
+for (i = 1; i <= height; i++) {
+  row = "";
 
-
-for (i = 2; i <= (height + 1); i++) {
-    row = "";
-
-    for (j = 1; j <= (height - i); j++) {
-      row += ' ';
+  for (j = 1; j <= (height - i); j++) {
+    row += " ";
+    if (j == (height - i)) {
+      row += "#"
     }
-
-    for (k = 1; k <= i; k++) {
-      row += '#';
-    }
-
-    console.log(row);
-
   }
-console.log();
+  for (k = 1; k <= i; k++) {
+    row += "#";
+  }
+  if (i == height) {
+    row += "#";
+  }
+  console.log(row);
+}
+console.log()

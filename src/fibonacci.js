@@ -25,4 +25,4 @@ for (let i = 2; i < integer + 1; i++){
 
 stuff3 = (stuff3).toLocaleString()
 
-console.log("\n" + stuff3 + ".")
+console.log("\n" + stuff3 + ".\n")
