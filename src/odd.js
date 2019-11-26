@@ -4,7 +4,6 @@ const MAX = Number.MAX_SAFE_INTEGER;
 const MIN = 1;
 
 
-
 let integer = 0
 
 let sum = 0
@@ -26,12 +25,5 @@ while (integer > 0) {
       sum = (sum + number);
     }
   }
-
-
-
-
-
-
-
 
 console.log("\n" + sum.toLocaleString() + "." + "\n" )

@@ -19,11 +19,6 @@ do {
 } while (integer > 0);
 
 
-
 let average = (sum / amount).toLocaleString("en", { minimumFractionDigits: 3, maximumFractionDigits: 3});
-
-
-
-
 
 console.log("\n" + average + "." + "\n");
